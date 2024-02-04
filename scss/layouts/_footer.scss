@@ -1,0 +1,91 @@
+.footer {
+  position: relative;
+  padding: 32px 0;
+  background-image: url(/images/footer-background.png);
+  background-color: var(--color-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    bottom: 0;
+    background-repeat: no-repeat;
+    content: "";
+  }
+  &::before {
+    width: 280px;
+    height: 190px;
+    left: 0;
+    background-image: url(/images/pizza-footer.png);
+  }
+  &::after {
+    width: 280px;
+    height: 190px;
+    right: 0;
+    background-repeat: no-repeat;
+    background-image: url(/images//bread-footer.png);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
+  }
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+    }
+  }
+  &__logo {
+    transform: scale(0.7);
+  }
+
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+  &__address-list,
+  &__address-info {
+    flex-grow: 1;
+  }
+  &__address-link {
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  &__address-link:hover {
+    color: var(--color-brand-normal);
+  }
+  &__address-icon {
+    fill: var(--color-light);
+  }
+
+  &__address-icon:hover {
+    fill: var(--color-brand-normal);
+  }
+  &__address-copyright {
+    font-size: 14px;
+    color: var(--color-secondary-dark);
+    margin-bottom: -5px;
+  }
+}
+
+.by {
+  color: var(--color-secondary-dark);
+  font-size: 14px;
+  text-decoration: none;
+}

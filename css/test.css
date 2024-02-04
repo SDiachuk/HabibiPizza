@@ -1,0 +1,207 @@
+/* * {
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  padding: 10px;
+  border: 5px solid darkblue;
+  margin: 10px;
+}
+
+.item:nth-child(2) {
+  width: 50px;
+  height: 50px;
+}
+.item:last-child {
+  width: 80px;
+  height: 80px;
+} */
+* {
+  box-sizing: border-box;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border: 1px dotted black;
+  padding: 20px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.item.red {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  transform: translate(10px, 50px);
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+.item.red:hover {
+  background-color: blueviolet;
+}
+.item.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  /* transform: rotate(90deg); */
+  animation-name: spin;
+  animation-duration: 1s;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.item.blue {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  transform: scale(0.5);
+}
+
+.item.orange {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  transform: skew(20deg, 20deg);
+}
+
+.section-title {
+  top: 25px;
+  background-color: aquamarine;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 900px;
+  padding: 128px;
+  background-color: #faf4ea;
+  border-radius: 30px;
+  overflow-y: auto;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.form-label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+}
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: transparent;
+}
+/* .form-field:focus-within .form-label {
+  transform: translate(-36px, -40px);
+} */
+.form-input:focus {
+  border-color: blue;
+  outline: none;
+}
+/* если поле обязательное
+.form-input:required {
+  border-color: red;
+} */
+/* .form-input:disabled {
+  border-color: antiquewhite;
+} */
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.form-input::placeholder {
+  color: aqua;
+  font-size: 16px;
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  color: antiquewhite;
+}
+.button {
+  display: block;
+  padding: 16px 32px;
+  color: gold;
+  font-weight: 600;
+  background: orangered;
+  border: 2px solid gray;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+}
+.button:hover {
+  color: purple;
+  background-color: black;
+}
+/* .button[disabled] {
+  color: gray;
+  background-color: lightgrey;
+} */
+/* для создания своего окна для галочки "согласен" 
+.checkbox-input {
+  appearance: none;
+}
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: green;
+}
+.checkbox {
+  position: relative;
+}
+.checkbox-label {
+  padding-left: 24px;
+}
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid red;
+  border-radius: 2px;
+  content: "";
+} */

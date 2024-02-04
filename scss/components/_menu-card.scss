@@ -1,0 +1,78 @@
+.image-button1 {
+  background-image: linear-gradient(
+      180deg,
+      rgba(49, 38, 26, 0) 55.21%,
+      rgba(49, 38, 26, 0.71) 72.92%,
+      var(--color-dark) 100%
+    ),
+    url(/images/menu-pizza.jpg);
+}
+.image-button2 {
+  background-image: linear-gradient(
+      180deg,
+      rgba(49, 38, 26, 0) 55.21%,
+      rgba(49, 38, 26, 0.71) 72.92%,
+      var(--color-dark) 100%
+    ),
+    url(/images/menu-salad.jpg);
+}
+.image-button3 {
+  background-image: linear-gradient(
+      180deg,
+      rgba(49, 38, 26, 0) 55.21%,
+      rgba(49, 38, 26, 0.71) 72.92%,
+      var(--color-dark) 100%
+    ),
+    url(/images/menu-backery.jpg);
+}
+
+.image-button4 {
+  background-image: linear-gradient(
+      180deg,
+      rgba(49, 38, 26, 0) 55.21%,
+      rgba(49, 38, 26, 0.71) 72.92%,
+      var(--color-dark) 100%
+    ),
+    url(/images/menu-snaks.jpg);
+}
+
+.image-button1,
+.image-button2,
+.image-button3,
+.image-button4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 365px;
+  height: 444px;
+  margin: auto;
+  margin-top: 5px;
+  padding: 24px;
+  background-position: center;
+  background-size: contain;
+  border-radius: 16px;
+  border: 1px solid lightgray;
+  transition: transform 0.3s;
+  cursor: pointer;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-light);
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    color: var(--color-light);
+  }
+}
+.image-button1:hover,
+.image-button2:hover,
+.image-button3:hover,
+.image-button4:hover {
+  transform: scale(1.02);
+}
